@@ -13,8 +13,12 @@
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
 
-# ignore jetbrains folder
+# jetbrains folder
 .idea/
 
-# ignore project binary
+# project binary
 signet-challenge-backend
+
+# build directory
+build/
+dist/
