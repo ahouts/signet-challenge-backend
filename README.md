@@ -4,8 +4,8 @@
 ## easy setup
 download the latest release
 ```bash
-unzip signet-challenge-backend-{your-arch-here}.zip
-cd signet-challenge-backend
+mkdir signet-challenge-backend && cd signet-challenge-backend
+unzip /path/to/signet-challenge-backend-{your-arch-here}.zip
 ./signet-challenge-backend serve
 ```
 
