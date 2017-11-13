@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir build dist
-cp -r ./schedule_data.json ./swagger-dist ./build
+cp -r ./schedule_data.json ./build
 
 # linux builds
 env GOOS=linux GOARCH=amd64 go build
