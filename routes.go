@@ -49,5 +49,13 @@ func scheduleWs(s *Schedule) *restful.WebService {
 		Param(ws.PathParameter("event-id", "Id of the event").DataType("int").DefaultValue("-1")).
 		Writes(new(VisitEvent)))
 
+	ws.Filter(enableCORS)
 	return ws
+}
+
+func enableCORS(req *restful.Request, resp *restful.Response, chain *restful.FilterChain) {
+	if origin := req.Request.Header.Get("Origin"); origin != "" {
+		resp.AddHeader("Access-Control-Allow-Origin", origin)
+	}
+	chain.ProcessFilter(req, resp)
 }
