@@ -35,15 +35,17 @@ cd ./build
 zip ../dist/signet-challenge-backend-macOS-i386.zip ./*
 cd ..
 
+rm ./build/signet-challenge-backend
+
 # windows builds
 env GOOS=windows GOARCH=amd64 go build
-cp ./signet-challenge-backend ./build
+cp ./signet-challenge-backend.exe ./build
 cd ./build
 zip ../dist/signet-challenge-backend-windows-amd64.zip ./*
 cd ..
 
 env GOOS=windows GOARCH=386 go build
-cp ./signet-challenge-backend ./build
+cp ./signet-challenge-backend.exe ./build
 cd ./build
 zip ../dist/signet-challenge-backend-windows-i386.zip ./*
 cd ..
