@@ -22,3 +22,5 @@ signet-challenge-backend
 # build directory
 build/
 dist/
+vendor/
+
